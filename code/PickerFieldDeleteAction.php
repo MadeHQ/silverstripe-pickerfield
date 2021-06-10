@@ -12,7 +12,6 @@ class PickerFieldDeleteAction extends GridFieldDeleteAction {
 		parent::__construct(true); // unlink vs. delete selected objects
 	}
 
-
 	public function handleAction(GridField $gridField, $actionName, $arguments, $data) {
 		// use native GridFieldDeleteAction handleAction() method when !has_one
 		if(!$gridField->isHaveOne()) { return parent::handleAction($gridField, $actionName, $arguments, $data); }
@@ -23,7 +22,10 @@ class PickerFieldDeleteAction extends GridFieldDeleteAction {
 		$gridField->childObject->write();
 
 		$gridField->setList(ArrayList::create());
+
+		$title = singleton($gridField->childObject->$childProperty->className)->singular_name();
+		$newAdd = new PickerFieldAddExistingSearchButton();
+		$newAdd->setTitle('Select a ' . $title);
+		$gridField->getConfig()->addComponent($newAdd);
 	}
-
-
 }

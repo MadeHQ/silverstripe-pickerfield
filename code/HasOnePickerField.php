@@ -39,5 +39,8 @@ class HasOnePickerField extends PickerField {
 		// remove components non-applicable to has_one relationships
 		$this->getConfig()->removeComponentsByType(GridFieldPaginator::class);
 
+		if ($currentHasOne->ID) {
+			$this->getConfig()->removeComponentsByType(PickerFieldAddExistingSearchButton::class);
+		}
 	}
 }

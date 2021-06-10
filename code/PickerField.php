@@ -46,7 +46,7 @@ class PickerField extends GridField {
 
 		if(!$linkExistingTitle)
 		{
-		    $dataClassName = array_values(array_slice(explode("\\", $dataList->dataClass()), -1))[0];
+		    $dataClassName = array_values(array_slice(explode("\\", singleton($dataList->dataClass())->singular_name()), -1))[0];
 			$linkExistingTitle = ($this->isHaveOne()) ?
 				'Select a ' . $dataClassName :		// singular [has_one]
 				'Select ' . $dataClassName . '(s)';	// plural [has_many, many_many]
