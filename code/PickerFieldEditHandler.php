@@ -1,6 +1,6 @@
 <?php
 
-namespace TheWebmen\PickerField\Controllers;
+namespace MadeMedia\PickerField\Controllers;
 use SilverStripe\Control\PjaxResponseNegotiator;
 use SilverStripe\Forms\GridField\GridFieldDetailForm_ItemRequest;
 use SilverStripe\GraphQL\Controller;

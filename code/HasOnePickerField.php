@@ -1,6 +1,6 @@
 <?php
 
-namespace TheWebmen\PickerField\Controllers;
+namespace MadeMedia\PickerField\Controllers;
 
 use SilverStripe\Forms\GridField\GridFieldPaginator;
 use SilverStripe\ORM\DataObject;

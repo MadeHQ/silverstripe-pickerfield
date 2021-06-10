@@ -1,6 +1,6 @@
 <?php
 
-namespace TheWebmen\PickerField\Controllers;
+namespace MadeMedia\PickerField\Controllers;
 
 use SilverStripe\ORM\SS_List;
 use SilverStripe\View\ArrayData;
@@ -54,7 +54,7 @@ class PickerFieldAddExistingSearchButton extends GridFieldAddExistingSearchButto
         ));
 
         return array(
-            $this->fragment => $data->renderWith('TheWebmen\\GridFieldExtensions\\GridFieldAddExistingSearchButtonOverride'),
+            $this->fragment => $data->renderWith('MadeMedia\\GridFieldExtensions\\GridFieldAddExistingSearchButtonOverride'),
         );
     }
 

@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "TheWebmen\\PickerField\\": "src/"
+            "MadeMedia\\PickerField\\": "src/"
         }
     }
 }

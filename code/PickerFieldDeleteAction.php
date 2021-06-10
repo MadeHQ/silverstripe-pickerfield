@@ -1,6 +1,6 @@
 <?php
 
-namespace TheWebmen\PickerField\Controllers;
+namespace MadeMedia\PickerField\Controllers;
 
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldDeleteAction;
