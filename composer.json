@@ -1,8 +1,8 @@
 {
-    "name": "vipen-made/silverstripe-pickerfield",
+    "name": "mademedia/silverstripe-pickerfield",
     "description": "GridField based management of has_one , has_many , and many_many relationship selection",
     "type": "silverstripe-vendormodule",
-    "homepage": "https://github.com/vipen-made/silverstripe-pickerfield",
+    "homepage": "https://github.com/MadeHQ/silverstripe-pickerfield",
     "keywords": [
         "silverstripe",
         "gridfield",
