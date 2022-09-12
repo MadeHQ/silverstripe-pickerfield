@@ -31,7 +31,11 @@ class HasOnePickerField extends PickerField {
 		$this->childObject = $childObject;
 
 		// convert the has_one relation getter to a DataList / SS_List
-		$dataList = $modelClass::get()->filter(array('ID' => $currentHasOne->ID));
+		$dataList = $modelClass::get();
+
+		if ($currentHasOne && $currentHasOne->exists()) {
+			$dataList = $dataList->filter(array('ID' => $currentHasOne->ID));
+		}
 
 		// construct the PickerField
 		parent::__construct($name, $title, $dataList, $linkExistingTitle);
@@ -39,7 +43,7 @@ class HasOnePickerField extends PickerField {
 		// remove components non-applicable to has_one relationships
 		$this->getConfig()->removeComponentsByType(GridFieldPaginator::class);
 
-		if ($currentHasOne->ID) {
+		if ($currentHasOne && $currentHasOne->ID) {
 			$this->getConfig()->removeComponentsByType(PickerFieldAddExistingSearchButton::class);
 		}
 	}
